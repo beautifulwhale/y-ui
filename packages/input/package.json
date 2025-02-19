@@ -1,0 +1,17 @@
+{
+  "name": "@y-ui/input",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.tsx --format cjs,esm --dts",
+    "test": "vitest"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}
