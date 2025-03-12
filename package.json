@@ -2,6 +2,9 @@
   "name": "y-ui",
   "version": "1.0.0",
   "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "turbo run build",
     "test": "turbo run build test",
