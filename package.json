@@ -1,9 +1,10 @@
 {
-  "name": "y-ui",
+  "name": "@rainliu/y-ui",
   "version": "1.0.0",
   "publishConfig": {
     "access": "public"
   },
+  "keywords": ["y-ui", "react-ui"],
   "files": [
     "dist",
     "package.json",
