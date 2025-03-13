@@ -5,8 +5,43 @@
   "publishConfig": {
     "access": "public"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.js",
+      "require": "./dist/lib/index.js",
+      "types": "./dist/es/index.d.ts"
+    },
+    "./button": {
+      "import": "./dist/es/button/index.js",
+      "require": "./dist/lib/button/index.js",
+      "types": "./dist/es/button/index.d.ts"
+    },
+    "./calendar": {
+      "import": "./dist/es/calendar/index.js",
+      "require": "./dist/lib/calendar/index.js",
+      "types": "./dist/es/calendar/index.d.ts"
+    },
+    "./input": {
+      "import": "./dist/es/input/index.js",
+      "require": "./dist/lib/input/index.js",
+      "types": "./dist/es/input/index.d.ts"
+    },
+    "./input-with-button": {
+      "import": "./dist/es/input-with-button/index.js",
+      "require": "./dist/lib/input-with-button/index.js",
+      "types": "./dist/es/input-with-button/index.d.ts"
+    },
+    "./message": {
+      "import": "./dist/es/message/index.js",
+      "require": "./dist/lib/message/index.js",
+      "types": "./dist/es/message/index.d.ts"
+    }
+  },
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/es/index.d.ts",
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build && ts-node scripts/post-build.ts",
     "test": "turbo run build test",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
@@ -49,5 +84,6 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "packageManager": "pnpm@8.11.0"
+  "packageManager": "pnpm@8.11.0",
+  "sideEffects": false
 }
