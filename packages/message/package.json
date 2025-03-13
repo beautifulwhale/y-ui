@@ -1,0 +1,29 @@
+{
+  "name": "@y-ui/message",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup --config ./tsup.config.ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "sass": "^1.85.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0",
+    "jsdom": "^26.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@types/classnames": "^2.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
