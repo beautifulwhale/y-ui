@@ -1,5 +1,5 @@
 {
-  "name": "@y-ui/input",
+  "name": "@rainliu/y-ui-input",
   "version": "2.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

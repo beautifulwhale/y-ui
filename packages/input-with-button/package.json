@@ -1,5 +1,5 @@
 {
-  "name": "@y-ui/input-with-button",
+  "name": "@rainliu/y-ui-input-with-button",
   "version": "2.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -9,8 +9,8 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@y-ui/button": "workspace:*",
-    "@y-ui/input": "workspace:*"
+    "@rainliu/y-ui-button": "workspace:*",
+    "@rainliu/y-ui-input": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.0.0"

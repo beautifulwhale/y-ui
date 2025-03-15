@@ -1,5 +1,5 @@
 {
-  "name": "@y-ui/calendar",
+  "name": "@rainliu/y-ui-calendar",
   "version": "2.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

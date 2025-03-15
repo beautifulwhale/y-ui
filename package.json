@@ -1,6 +1,6 @@
 {
   "name": "@rainliu/y-ui",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "publishConfig": {
     "access": "public"
   },
@@ -49,6 +49,13 @@
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.js",
   "types": "./dist/es/index.d.ts",
+  "dependencies": {
+    "@rainliu/y-ui-button": "workspace:*",
+    "@rainliu/y-ui-calendar": "workspace:*",
+    "@rainliu/y-ui-input": "workspace:*",
+    "@rainliu/y-ui-input-with-button": "workspace:*",
+    "@rainliu/y-ui-message": "workspace:*"
+  },
   "scripts": {
     "build": "turbo run build && ts-node scripts/post-build.ts",
     "test": "turbo run build test",
