@@ -67,4 +67,4 @@ function Calendar(props: CalendarProps) {
   );
 }
 
-export default Calendar;
+export { Calendar };

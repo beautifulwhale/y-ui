@@ -4,7 +4,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["y-ui", "react-ui"],
+  "keywords": [
+    "y-ui",
+    "react-ui"
+  ],
   "files": [
     "dist",
     "package.json",

@@ -14,6 +14,10 @@ export function createTsupConfig(options = {}) {
     sourcemap: true,
     clean: true,
     treeshake: true,
+    // 根据格式区分文件扩展名
+    outExtension: ({ format }) => ({
+      js: format === "esm" ? ".mjs" : ".js",
+    }),
     // 配置esbuild以处理sass/scss文件
     esbuildPlugins: [
       sassPlugin({
