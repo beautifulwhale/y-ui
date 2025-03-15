@@ -1,37 +1,95 @@
 {
-  "name": "y-ui",
+  "name": "@rainliu/y-ui",
   "version": "1.0.0",
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["y-ui", "react-ui"],
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.js",
+      "require": "./dist/lib/index.js",
+      "types": "./dist/es/index.d.ts"
+    },
+    "./button": {
+      "import": "./dist/es/button/index.js",
+      "require": "./dist/lib/button/index.js",
+      "types": "./dist/es/button/index.d.ts"
+    },
+    "./calendar": {
+      "import": "./dist/es/calendar/index.js",
+      "require": "./dist/lib/calendar/index.js",
+      "types": "./dist/es/calendar/index.d.ts"
+    },
+    "./input": {
+      "import": "./dist/es/input/index.js",
+      "require": "./dist/lib/input/index.js",
+      "types": "./dist/es/input/index.d.ts"
+    },
+    "./input-with-button": {
+      "import": "./dist/es/input-with-button/index.js",
+      "require": "./dist/lib/input-with-button/index.js",
+      "types": "./dist/es/input-with-button/index.d.ts"
+    },
+    "./message": {
+      "import": "./dist/es/message/index.js",
+      "require": "./dist/lib/message/index.js",
+      "types": "./dist/es/message/index.d.ts"
+    }
+  },
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/es/index.d.ts",
   "scripts": {
-    "build": "pnpm -r build",
-    "test": "pnpm -r test",
-    "clean": "pnpm -r clean",
-    "dev": "pnpm -r dev",
+    "build": "turbo run build && ts-node scripts/post-build.ts",
+    "test": "turbo run build test",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
     "prepare": "husky install",
     "commit": "git-cz",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "create:component": "ts-node scripts/create-component.ts"
   },
   "devDependencies": {
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "typescript": "^5.0.0",
-    "vitest": "^1.0.0",
-    "@testing-library/react": "^14.0.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "tsup": "^8.0.0",
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.21",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "esbuild-sass-plugin": "^3.3.1",
     "husky": "^8.0.3",
-    "lint-staged": "^15.2.0"
+    "jsdom": "^26.0.0",
+    "lint-staged": "^15.2.0",
+    "postcss": "^8.5.3",
+    "postcss-preset-env": "^10.1.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "sass": "^1.85.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.0",
+    "turbo": "^2.4.4",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  }
-} 
+  },
+  "packageManager": "pnpm@8.11.0",
+  "sideEffects": false
+}
