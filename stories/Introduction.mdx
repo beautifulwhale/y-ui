@@ -1,0 +1,75 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="介绍/Y-UI组件库" />
+
+# Y-UI 组件库
+
+Y-UI 是一个轻量级的 React 组件库，提供了一系列简单易用、可定制的 UI 组件，帮助开发者快速构建现代化的 Web 应用。
+
+## 特点
+
+- **简单易用**：API 设计简洁明了，易于上手
+- **可定制**：支持自定义样式和主题
+- **TypeScript 支持**：使用 TypeScript 开发，提供完整的类型定义
+- **模块化**：可按需引入组件，减小打包体积
+
+## 安装
+
+```bash
+# 使用 npm
+npm install @rainliu/y-ui
+
+# 使用 yarn
+yarn add @rainliu/y-ui
+
+# 使用 pnpm
+pnpm add @rainliu/y-ui
+```
+
+## 快速开始
+
+```jsx
+import React from "react";
+import { Button } from "@rainliu/y-ui";
+
+function App() {
+  return (
+    <div>
+      <Button type="primary">点击我</Button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+## 组件列表
+
+Y-UI 目前提供以下组件：
+
+### 基础组件
+
+- [Button](/docs/components-button--docs) - 按钮组件
+- [Input](/docs/components-input--docs) - 输入框组件
+- [InputWithButton](/docs/components-inputwithbutton--docs) - 输入框与按钮组合组件
+
+### 数据展示
+
+- [Calendar](/docs/components-calendar--docs) - 日历组件
+
+### 反馈
+
+- [Message](/docs/components-message--docs) - 全局消息提示组件
+
+## 贡献指南
+
+我们欢迎任何形式的贡献，包括但不限于：
+
+- 提交 bug 报告
+- 改进文档
+- 提交功能请求
+- 提交代码
+
+## 许可证
+
+Y-UI 使用 MIT 许可证。
